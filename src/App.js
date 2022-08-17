@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container } from "react-bootstrap";
+import AddExpense from "./Comps/AddExpense";
+import BreakdownExpense from "./Comps/BreakdownExpense";
+import FilterExpense from "./Comps/FilterExpense";
+import ListExpense from "./Comps/ListExpense";
+import "./App.css";
+import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const initialState = [
+        {
+            id: uuidv4(),
+            date: new Date(),
+            desc: "initial",
+            amount: 0,
+            type: "initial",
+        },
+    ];
+    const [expenses, setExpenses] = useState(initialState);
+
+    return (
+        <div className="App">
+            <h1 className="p-4">Expense tracker</h1>
+            <Container>
+                <AddExpense setExpenses={setExpenses} expenses={expenses} />
+                <BreakdownExpense />
+                <FilterExpense />
+                <ListExpense expenses={expenses} />
+            </Container>
+        </div>
+    );
 }
 
 export default App;
