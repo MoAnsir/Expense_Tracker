@@ -3,7 +3,7 @@ import AddExpense from "./Comps/AddExpense";
 import BreakdownExpense from "./Comps/BreakdownExpense";
 import FilterExpense from "./Comps/FilterExpense";
 import ListExpense from "./Comps/ListExpense";
-import "./App.css";
+import Styles from "./App.module.scss";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
@@ -20,7 +20,7 @@ function App() {
     const [expenses, setExpenses] = useState(initialState);
 
     return (
-        <div className="App">
+        <div className={Styles.app}>
             <h1 className="p-4">Expense tracker</h1>
             <Container>
                 <AddExpense setExpenses={setExpenses} expenses={expenses} />
