@@ -24,9 +24,9 @@ function App() {
             <h1 className="p-4">Expense tracker</h1>
             <Container>
                 <AddExpense setExpenses={setExpenses} expenses={expenses} />
-                <BreakdownExpense expenses={expenses} />
                 <FilterExpense expenses={expenses} setExpenses={setExpenses} />
                 <ListExpense setExpenses={setExpenses} expenses={expenses} />
+                <BreakdownExpense expenses={expenses} />
             </Container>
         </div>
     );

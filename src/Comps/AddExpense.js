@@ -28,7 +28,7 @@ function AddExpense({ setExpenses, expenses }) {
     };
 
     return (
-        <Row>
+        <Row className="mb-5">
             <h2 className="p-2">Add Expense</h2>
             <input
                 className="p-2 mb-2"

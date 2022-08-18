@@ -57,12 +57,15 @@ function FilterExpense({ expenses, setExpenses }) {
     };
 
     return (
-        <Row>
+        <Row className="mb-5">
             <Col>
                 <div>
                     <h2>Filter expenses</h2>
                     <Button onClick={() => onTimeFilterClick()}>Time</Button>
-                    <Button onClick={() => onAmountFilterClick()}>
+                    <Button
+                        className="mx-5"
+                        onClick={() => onAmountFilterClick()}
+                    >
                         Amount
                     </Button>
                     <Button onClick={() => onTypeFilterClick()}>Type</Button>

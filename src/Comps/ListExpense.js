@@ -25,13 +25,13 @@ function ListExpense({ setExpenses, expenses }) {
     };
 
     return (
-        <Row>
+        <Row className="mb-5 text-center">
             <Col className="p-0 m-0">
                 <h2>Current Expenses</h2>
                 <ul className="p-0 m-0">
                     {expenses.length
                         ? expenses.map((expense, index) => (
-                              <li key={expense.id}>
+                              <li key={expense.id} className="">
                                   <Button
                                       className="me-4"
                                       onClick={() => handleDelete(expense.id)}
