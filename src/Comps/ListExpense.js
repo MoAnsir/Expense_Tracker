@@ -1,14 +1,13 @@
 import { Row, Col, Button } from "react-bootstrap";
+import EditModal from "./EditModal";
 import { useState } from "react";
 import Styles from "./ListExpense.module.scss";
 
 function ListExpense({ setExpenses, expenses }) {
-    console.log(
-        "🚀 ~ file: ListExpense.js ~ line 5 ~ ListExpense ~ expenses",
-        expenses.length
-    );
     // If these is only the initial expense then do "No expenses to show"
     //  If there are more than 2 then show from index 1 and onwards.
+    const [showModal, setShowModal] = useState(false);
+    const [modalData, setModalData] = useState("");
 
     const handleDelete = (expenseId) => {
         const filterDelete = expenses.filter(function (value) {
@@ -17,13 +16,21 @@ function ListExpense({ setExpenses, expenses }) {
         setExpenses(filterDelete);
     };
 
+    const handleEditClick = (expenseId) => {
+        const filterEdit = expenses.filter(function (value) {
+            return value.id === expenseId;
+        });
+        setShowModal(true);
+        setModalData(filterEdit);
+    };
+
     return (
         <Row>
             <Col className="p-0 m-0">
                 <h2>Current Expenses</h2>
                 <ul className="p-0 m-0">
                     {expenses.length
-                        ? expenses.map((expense) => (
+                        ? expenses.map((expense, index) => (
                               <li key={expense.id}>
                                   <Button
                                       className="me-4"
@@ -36,7 +43,23 @@ function ListExpense({ setExpenses, expenses }) {
                                       £{expense.amount}
                                   </p>
                                   <p className="d-inline">{expense.desc}</p>
-                                  <Button className="ms-4">Edit</Button>
+                                  <Button
+                                      className="ms-4"
+                                      onClick={() =>
+                                          handleEditClick(expense.id)
+                                      }
+                                  >
+                                      Edit
+                                  </Button>
+                                  {modalData ? (
+                                      <EditModal
+                                          showModal={showModal}
+                                          setShowModal={setShowModal}
+                                          editExpense={modalData}
+                                          globalExpenses={expenses}
+                                          index={index}
+                                      />
+                                  ) : null}
                               </li>
                           ))
                         : "No Expenses"}
