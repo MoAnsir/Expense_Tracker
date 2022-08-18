@@ -26,7 +26,7 @@ function App() {
                 <AddExpense setExpenses={setExpenses} expenses={expenses} />
                 <BreakdownExpense />
                 <FilterExpense />
-                <ListExpense expenses={expenses} />
+                <ListExpense setExpenses={setExpenses} expenses={expenses} />
             </Container>
         </div>
     );
