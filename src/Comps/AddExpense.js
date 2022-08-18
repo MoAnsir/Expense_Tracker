@@ -3,9 +3,9 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 function AddExpense({ setExpenses, expenses }) {
-    const [description, setDescription] = useState(null);
-    const [amount, setAmount] = useState(null);
-    const [type, setType] = useState(null);
+    const [description, setDescription] = useState("");
+    const [amount, setAmount] = useState("");
+    const [type, setType] = useState("");
     const date = new Date();
 
     const handleAddExpense = (e) => {
