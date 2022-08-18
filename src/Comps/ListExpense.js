@@ -11,15 +11,19 @@ function ListExpense({ expenses }) {
     //  If there are more than 2 then show from index 1 and onwards.
     return (
         <Row>
-            <Col>
+            <Col className="p-0 m-0">
                 <h2>Current Expenses</h2>
-                <ul>
+                <ul className="p-0 m-0">
                     {expenses.length > 1
                         ? expenses.map((expense) => (
                               <li key={expense.id}>
-                                  <p>{expense.desc}</p>
-                                  <p>{expense.amount}</p>
-                                  <p>{expense.type}</p>
+                                  <Button className="me-4">Delete</Button>
+                                  <p className="d-inline">{expense.type}</p>
+                                  <p className="d-inline mx-4">
+                                      £{expense.amount}
+                                  </p>
+                                  <p className="d-inline">{expense.desc}</p>
+                                  <Button className="ms-4">Edit</Button>
                               </li>
                           ))
                         : "No Expenses"}
