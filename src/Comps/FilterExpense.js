@@ -57,18 +57,23 @@ function FilterExpense({ expenses, setExpenses }) {
     };
 
     return (
-        <Row className="mb-5">
+        <Row className="mb-5" data-testid="filter-expense">
             <Col>
                 <div>
                     <h2>Filter expenses</h2>
-                    <Button onClick={() => onTimeFilterClick()}>Time</Button>
+                    <Button name="time" onClick={() => onTimeFilterClick()}>
+                        Time
+                    </Button>
                     <Button
+                        name="amount"
                         className="mx-5"
                         onClick={() => onAmountFilterClick()}
                     >
                         Amount
                     </Button>
-                    <Button onClick={() => onTypeFilterClick()}>Type</Button>
+                    <Button name="type" onClick={() => onTypeFilterClick()}>
+                        Type
+                    </Button>
                 </div>
             </Col>
         </Row>

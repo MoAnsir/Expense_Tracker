@@ -28,7 +28,7 @@ function AddExpense({ setExpenses, expenses }) {
     };
 
     return (
-        <Row className="mb-5">
+        <Row className="mb-5" data-testid="add-expense">
             <h2 className="p-2">Add Expense</h2>
             <input
                 className="p-2 mb-2"
@@ -64,7 +64,11 @@ function AddExpense({ setExpenses, expenses }) {
                 <option value="entertainment">Entertainment</option>
                 <option value="other">Other</option>
             </select>
-            <Button className="my-2" onClick={(e) => handleAddExpense(e)}>
+            <Button
+                name="add_expense"
+                className="my-2"
+                onClick={(e) => handleAddExpense(e)}
+            >
                 Add Expense
             </Button>
         </Row>

@@ -25,7 +25,7 @@ function ListExpense({ setExpenses, expenses }) {
     };
 
     return (
-        <Row className="mb-5 text-center">
+        <Row className="mb-5 text-center" data-testid="list-expense">
             <Col className="p-0 m-0">
                 <h2>Current Expenses</h2>
                 <ul className="p-0 m-0">

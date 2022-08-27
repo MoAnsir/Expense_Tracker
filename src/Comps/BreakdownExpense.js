@@ -75,7 +75,7 @@ function BreakdownExpense({ expenses }) {
     };
 
     return (
-        <Row>
+        <Row data-testid="breakdown-expense">
             <Col>
                 <Pie data={data} />
             </Col>

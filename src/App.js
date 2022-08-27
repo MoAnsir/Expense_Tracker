@@ -7,7 +7,7 @@ import Styles from "./App.module.scss";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-function App() {
+function App({ testInitialState }) {
     const initialState = [
         {
             id: uuidv4(),
@@ -17,7 +17,12 @@ function App() {
             type: "initial",
         },
     ];
-    const [expenses, setExpenses] = useState(initialState);
+
+    const [expenses, setExpenses] = useState(
+        testInitialState ? testInitialState : initialState
+    );
+
+    //const [expenses, setExpenses] = useState(initialState);
 
     return (
         <div className={Styles.app}>
