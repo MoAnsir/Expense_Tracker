@@ -1,6 +1,7 @@
 import { Row, Button } from "react-bootstrap";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import Styles from "../App.module.scss";
 
 function AddExpense({ setExpenses, expenses }) {
     const [description, setDescription] = useState("");
@@ -28,7 +29,7 @@ function AddExpense({ setExpenses, expenses }) {
     };
 
     return (
-        <Row className="mb-5" data-testid="add-expense">
+        <Row className={`${Styles.fl50} mb-5`} data-testid="add-expense">
             <h2 className="p-2">Add Expense</h2>
             <input
                 className="p-2 mb-2"

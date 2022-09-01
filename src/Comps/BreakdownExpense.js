@@ -1,6 +1,7 @@
 import { Row, Col } from "react-bootstrap";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Pie } from "react-chartjs-2";
+import Styles from "../App.module.scss";
 
 function BreakdownExpense({ expenses }) {
     const filterMortgageNum = expenses.filter(function (value) {
@@ -73,9 +74,9 @@ function BreakdownExpense({ expenses }) {
             },
         ],
     };
-
+console.log(data.datasets[0].data ? 'yes' : 'no')
     return (
-        <Row data-testid="breakdown-expense">
+        <Row data-testid="breakdown-expense" className={Styles.fl50}>
             <Col>
                 <Pie data={data} />
             </Col>

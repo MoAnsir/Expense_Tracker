@@ -4,10 +4,68 @@
   h1 {
     background-color: #282c34;
     color: white;
-    font-size: 7rem
+    font-size: 7rem;
   }
 }
 
+ul {
+  list-style: none;
 
+  li {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
 
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.fl50 {
+  flex: 0 50%;
+}
+
+.fl100 {
+  flex: 0 100%;
+}
+
+.width20{
+  width: 20%;
+}
+
+.filterBut{
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+@media (max-width: 575.98px) { 
+  .app {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .fl50 {
+    flex: 0 100%;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .fl100 {
+    flex: 0 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .filterBut{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}

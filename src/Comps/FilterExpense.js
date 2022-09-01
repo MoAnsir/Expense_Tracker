@@ -1,5 +1,6 @@
 import { Row, Col, Button } from "react-bootstrap";
 import { useState } from "react";
+import Styles from "../App.module.scss";
 
 function FilterExpense({ expenses, setExpenses }) {
     const [timeButton, setTimeButton] = useState(false);
@@ -57,21 +58,22 @@ function FilterExpense({ expenses, setExpenses }) {
     };
 
     return (
-        <Row className="mb-5" data-testid="filter-expense">
+        <Row className={`${Styles.fl100} mb-5 mt-5`} data-testid="filter-expense">
+
             <Col>
                 <div>
                     <h2>Filter expenses</h2>
-                    <Button name="time" onClick={() => onTimeFilterClick()}>
+                    <Button className={Styles.width20} name="time" onClick={() => onTimeFilterClick()}>
                         Time
                     </Button>
                     <Button
                         name="amount"
-                        className="mx-5"
+                        className={`${Styles.filterBut} ${Styles.width20}`}
                         onClick={() => onAmountFilterClick()}
                     >
                         Amount
                     </Button>
-                    <Button name="type" onClick={() => onTypeFilterClick()}>
+                    <Button className={Styles.width20} name="type" onClick={() => onTypeFilterClick()}>
                         Type
                     </Button>
                 </div>

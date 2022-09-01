@@ -27,11 +27,11 @@ function App({ testInitialState }) {
     return (
         <div className={Styles.app}>
             <h1 className="p-4">Expense tracker</h1>
-            <Container>
+            <Container className={Styles.flex}>
+                <BreakdownExpense expenses={expenses} />
                 <AddExpense setExpenses={setExpenses} expenses={expenses} />
                 <FilterExpense expenses={expenses} setExpenses={setExpenses} />
                 <ListExpense setExpenses={setExpenses} expenses={expenses} />
-                <BreakdownExpense expenses={expenses} />
             </Container>
         </div>
     );

@@ -10,10 +10,24 @@ exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
     Expense tracker
   </h1>
   <div
-    className="container"
+    className="flex container"
   >
     <div
-      className="mb-5 row"
+      className="fl50 row"
+      data-testid="breakdown-expense"
+    >
+      <div
+        className="col"
+      >
+        <canvas
+          height={150}
+          role="img"
+          width={300}
+        />
+      </div>
+    </div>
+    <div
+      className="fl50 mb-5 row"
       data-testid="add-expense"
     >
       <h2
@@ -105,7 +119,7 @@ exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
       </button>
     </div>
     <div
-      className="mb-5 row"
+      className="fl100 mb-5 mt-5 row"
       data-testid="filter-expense"
     >
       <div
@@ -116,7 +130,7 @@ exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
             Filter expenses
           </h2>
           <button
-            className="btn btn-primary"
+            className="width20 btn btn-primary"
             disabled={false}
             name="time"
             onClick={[Function]}
@@ -125,7 +139,7 @@ exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
             Time
           </button>
           <button
-            className="mx-5 btn btn-primary"
+            className="filterBut width20 btn btn-primary"
             disabled={false}
             name="amount"
             onClick={[Function]}
@@ -134,7 +148,7 @@ exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
             Amount
           </button>
           <button
-            className="btn btn-primary"
+            className="width20 btn btn-primary"
             disabled={false}
             name="type"
             onClick={[Function]}
@@ -146,7 +160,7 @@ exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
       </div>
     </div>
     <div
-      className="mb-5 text-center row"
+      className="fl100 mb-5 mt-5 row"
       data-testid="list-expense"
     >
       <div
@@ -159,10 +173,10 @@ exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
           className="p-0 m-0"
         >
           <li
-            className=""
+            className="pb-3 "
           >
             <button
-              className="me-4 btn btn-primary"
+              className="width20 me-4 btn btn-primary"
               disabled={false}
               onClick={[Function]}
               type="button"
@@ -170,23 +184,23 @@ exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
               Delete
             </button>
             <p
-              className="d-inline"
+              className="width20 d-inline"
             >
               initial
             </p>
             <p
-              className="d-inline mx-4"
+              className="width20 d-inline"
             >
               £
               0
             </p>
             <p
-              className="d-inline"
+              className="width20 d-inline"
             >
               initial
             </p>
             <button
-              className="ms-4 btn btn-primary"
+              className="width20 ms-4 btn btn-primary"
               disabled={false}
               onClick={[Function]}
               type="button"
@@ -195,20 +209,6 @@ exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
             </button>
           </li>
         </ul>
-      </div>
-    </div>
-    <div
-      className="row"
-      data-testid="breakdown-expense"
-    >
-      <div
-        className="col"
-      >
-        <canvas
-          height={150}
-          role="img"
-          width={300}
-        />
       </div>
     </div>
   </div>
