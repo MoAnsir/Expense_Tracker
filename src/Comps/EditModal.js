@@ -33,11 +33,10 @@ function EditModal({
         <Modal.Title>Edit Expense</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <p>
-          Original Expense: <b>{editExpense[0].desc}</b>
+        <p className="text-center">
+          <b>{editExpense[0].desc}</b>
         </p>
-        <div>
-          {/* <p className="d-inline">Edit Description:</p> */}
+        <div className="d-flex justify-content-between">
           <label className="mb-2" htmlFor="expenseDesc">
             Expense description:
           </label>
@@ -45,13 +44,12 @@ function EditModal({
             type="text"
             name="expenseDesc"
             id="expenseDesc"
-            className="d-inline mx-2"
+            className="d-inline mx-2 w-50"
             placeholder="Description"
             onChange={(e) => setItemDesc(e.target.value)}
           />
         </div>
-        <div>
-          {/* <p className="d-inline">Edit Amount:</p> */}
+        <div className="my-3 d-flex justify-content-between">
           <label className="mb-2" htmlFor="expenseAmount">
             Expense Amount:
           </label>
@@ -59,19 +57,20 @@ function EditModal({
             type="text"
             name="expenseAmount"
             id="expenseAmount"
-            className="d-inline mx-2"
+            className="d-inline mx-2 w-50"
             placeholder="Amount"
             onChange={(e) => setItemAmount(e.target.value)}
           />
         </div>
-        <div>
+        <div className="d-flex justify-content-between">
           <label className="mb-2" htmlFor="expenseType">
             Expense type:
           </label>
           <select
             name="expenseType"
             id="expenseType"
-            className="p-2"
+            className="
+            mx-2 w-50"
             onChange={(e) => setItemType(e.target.value)}
           >
             <option value="select">Please Select</option>
