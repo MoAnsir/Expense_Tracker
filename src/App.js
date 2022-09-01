@@ -8,33 +8,33 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 function App({ testInitialState }) {
-    const initialState = [
-        {
-            id: uuidv4(),
-            date: new Date(),
-            desc: "initial",
-            amount: 0,
-            type: "initial",
-        },
-    ];
+  const initialState = [
+    {
+      id: uuidv4(),
+      date: new Date(),
+      desc: "initial",
+      amount: 0,
+      type: "initial",
+    },
+  ];
 
-    const [expenses, setExpenses] = useState(
-        testInitialState ? testInitialState : initialState
-    );
+  const [expenses, setExpenses] = useState(
+    testInitialState ? testInitialState : initialState
+  );
 
-    //const [expenses, setExpenses] = useState(initialState);
+  //const [expenses, setExpenses] = useState(initialState);
 
-    return (
-        <div className={Styles.app}>
-            <h1 className="p-4">Expense tracker</h1>
-            <Container className={Styles.flex}>
-                <BreakdownExpense expenses={expenses} />
-                <AddExpense setExpenses={setExpenses} expenses={expenses} />
-                <FilterExpense expenses={expenses} setExpenses={setExpenses} />
-                <ListExpense setExpenses={setExpenses} expenses={expenses} />
-            </Container>
-        </div>
-    );
+  return (
+    <div className={Styles.app}>
+      <h1 className="p-4">Expense tracker</h1>
+      <Container className={Styles.flex}>
+        <BreakdownExpense expenses={expenses} />
+        <AddExpense setExpenses={setExpenses} expenses={expenses} />
+        <FilterExpense expenses={expenses} setExpenses={setExpenses} />
+        <ListExpense setExpenses={setExpenses} expenses={expenses} />
+      </Container>
+    </div>
+  );
 }
 
 export default App;

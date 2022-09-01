@@ -31,16 +31,16 @@ ul {
   flex: 0 100%;
 }
 
-.width20{
+.width20 {
   width: 20%;
 }
 
-.filterBut{
+.filterBut {
   margin-left: 4rem;
   margin-right: 4rem;
 }
 
-@media (max-width: 575.98px) { 
+@media (max-width: 575.98px) {
   .app {
     h1 {
       font-size: 4rem;
@@ -57,14 +57,14 @@ ul {
     width: 100%;
     text-align: center;
   }
-  
+
   .fl100 {
     flex: 0 100%;
     width: 100%;
     text-align: center;
   }
 
-  .filterBut{
+  .filterBut {
     margin-left: 1rem;
     margin-right: 1rem;
   }
