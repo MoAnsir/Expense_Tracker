@@ -1,6 +1,6 @@
 # Expense Tracker
 
-The aim for this project to for a user to input expenses, catergories them with the dropdown provided, edit them and filter them in list view. There is a also a pie chat showing the allocation of each expense and how it relates as a whole. Jest and Cypress were used for testing
+The aim for this project to for a user to input expenses, categories them with the dropdown provided, edit them and filter them in list view. There is a also a pie chat showing the allocation of each expense and how it relates as a whole. Jest and Cypress were used for testing
 <br />
 <img src="./public/main.PNG" width="350">
 
@@ -36,7 +36,7 @@ To add an expense you have 2 input boxes. one for the description and the second
 <img src="./public/add%20expense.PNG" width="350">
 <br />
 <br />
-The added expsense will show in the list view below
+The added expense will show in the list view below
 <br />
 <img src="./public/expense%20list.PNG" width="350">
 <br />
