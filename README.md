@@ -1,12 +1,27 @@
-# Getting Started with Create React App
+# Expense Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The aim for this project to for a user to input expenses, catergories them with the dropdown provided, edit them and filter them in list view. There is a also a pie chat showing the allocation of each expense and how it relates as a whole
 
-## Available Scripts
+## Technologies
+"react": "^18.2.0",
+"bootstrap": "^5.2.0",
+"chart.js": "^3.9.1",
+"cypress": "^10.4.0",
+"jest": "^28.1.3"
+
 
 In the project directory, you can run:
 
-### `npm start`
+## Installation
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,27 +29,20 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+To add an expense you have 2 input boxes. one for the description and the second for the amount. After filling out the form select a category it falls into and then click the "Add expenses" button
+![Demo CountPages alpha](./public/add%20expense.PNG)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The added expsense will show in the list view below
+![Demo CountPages alpha](./public/expense%20list.PNG)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+You can also filter the table by category type, Amount and Time. on fist click of one of the 3 filter buttons will filter the list in descending or and if you click it again will filter it to ascending order
+![Demo CountPages alpha](./public/filter.PNG)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Expenses that are added will be added to the chart
+![Demo CountPages alpha](./public/chart.PNG)
