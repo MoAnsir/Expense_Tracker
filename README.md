@@ -1,6 +1,7 @@
 # Expense Tracker
 
 The aim for this project to for a user to input expenses, catergories them with the dropdown provided, edit them and filter them in list view. There is a also a pie chat showing the allocation of each expense and how it relates as a whole. Jest and Cypress were used for testing
+<br />
 <img src="./public/main.PNG" width="350">
 
 ## Technologies
