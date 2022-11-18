@@ -23,9 +23,6 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
@@ -39,6 +36,9 @@ To add an expense you have 2 input boxes. one for the description and the second
 The added expsense will show in the list view below
 ![Demo CountPages alpha](./public/expense%20list.PNG)
 
+You can edit an expense by click the edit button in the list view. A modal will open. you can change the description, amount and the category. you can save your change or close the modal without saving. 
+![Demo CountPages alpha](./public/edit.PNG)
+
 
 You can also filter the table by category type, Amount and Time. on fist click of one of the 3 filter buttons will filter the list in descending or and if you click it again will filter it to ascending order
 ![Demo CountPages alpha](./public/filter.PNG)
@@ -46,3 +46,5 @@ You can also filter the table by category type, Amount and Time. on fist click o
 
 Expenses that are added will be added to the chart
 ![Demo CountPages alpha](./public/chart.PNG)
+
+
